@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>选择困难症救星 - 帮你快速做决定</title>
     <meta name="description" content="不知道吃什么？不知道做什么？选择困难症救星帮你快速做出生活决策，随机推荐美食、周末活动、影视剧和书籍。" />
+    <script>
+      // GitHub Pages SPA 重定向恢复
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
