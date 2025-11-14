@@ -28,6 +28,9 @@ jobs:
         run: npm run build
         env:
           VITE_APP_ID: ${{ secrets.VITE_APP_ID }}
+      
+      - name: Add .nojekyll file
+        run: touch ./dist/.nojekyll
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
